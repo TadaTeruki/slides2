@@ -9,7 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-
+    
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
+      with:
+        version: 9
+        run_install: false
+    
     - name: Build
       run: |
         git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
