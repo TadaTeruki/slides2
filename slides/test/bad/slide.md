@@ -15,4 +15,6 @@ yes
 
 # Here is better
 
+![bg right:40%](img/test.webp)
+
 ---

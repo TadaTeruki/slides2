@@ -1,2 +1,2 @@
 slides/test/good/slide.md 7c50301e9c7f740a98dd127c49f032f566f75a15caca69c7a7180246820c039d
-slides/test/bad/slide.md 16854903f204ebd72ead3a6bb9a088d688b6c38997c954749dd2cac9fd5d6ee3
+slides/test/bad/slide.md 0e4afa5064e9f3e133c362c00751533aefea20636b7eb30ebfb5b1595e8f39c4
