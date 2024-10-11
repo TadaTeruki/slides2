@@ -53,8 +53,8 @@ while IFS= read -r line; do
     if [ "$build" = "true" ]; then
         echo "Building slides..."
         {
-            echo $out_dir$out_file
-            pnpx @marp-team/marp-cli -I $(dirname $path) --output $out_dir
+            pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir
+            cp -r $(dirname $path)/img $out_dir
         } || {
             err=1
         }
