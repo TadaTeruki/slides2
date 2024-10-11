@@ -53,19 +53,18 @@ while IFS= read -r line; do
     if [ "$build" = "true" ]; then
         echo "Building slides..."
         {
-            pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir
-            cp -r $(dirname $path)/img $out_dir
+            pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir    
         } || {
             err=1
         }
+        cp -r $(dirname $path)/img $out_dir
     fi
 done < "$file"
 
 if [ $err = 0 ]; then
     # update routes
     echo "Updating routes..."
-    cp public/routes-tmp/routes.jsonl public/routes/routes.jsonl
-    cp public/routes-tmp/routes.txt public/routes/routes.txt
+    cp -r public/routes-tmp/* public/routes/
 fi
 
 # remove temporary files

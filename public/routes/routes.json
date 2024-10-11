@@ -1,0 +1,5 @@
+[
+{"src_path":"slides/test/good","src_file":"slide.html","title":"Welcome Good","description":"Simple Presentation","date":"2024-11-10","session":"良いLT会","tags,":"","thumbnail":""}
+,
+{"src_path":"slides/test/bad","src_file":"slide.html","title":"Welcome Bad","description":"Simple Presentation","date":"2024-11-10","session":"悪いLT会","tags,":"","thumbnail":"img/test.webp"}
+]
