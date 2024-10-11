@@ -1,0 +1,27 @@
+name: build slides
+
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build
+      run: |
+        git config user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+        git config user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+        export CURRENT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+        export DEPLOY_BRANCH=${CURRENT_BRANCH}-deploy
+        git switch -c $DEPLOY_BRANCH
+        git pull origin $CURRENT_BRANCH
+        git rm ./public/.gitignore
+        make build-slide-auto
+        git add .
+        git commit -m "build: $(date +'%Y/%m/%d %H:%M:%S')" 
+        git push origin -f $DEPLOY_BRANCH
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
