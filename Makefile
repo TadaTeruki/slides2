@@ -13,3 +13,7 @@ build: build-slide-auto
 .PHONY: resize-image
 resize-image:
 	bash scripts/resize-image.sh
+
+.PHONY: create-qr
+create-qr:
+	bash scripts/create-qr.sh
