@@ -15,7 +15,7 @@ first=true
 find slides -name '*.md' -print | grep -v "templates/" | while read -r file; do
   path=$(dirname $file)
   echo "Processing $file"
-  target_entries=("title" "description" "date" "session" "tags", "thumbnail")
+  target_entries=("title" "description" "date" "session" "tags" "thumbnail")
   entries=()
 
   for tag in "${target_entries[@]}"; do
