@@ -15,12 +15,18 @@ first=true
 find slides -name '*.md' -print | grep -v "templates/" | while read -r file; do
   path=$(dirname $file)
   echo "Processing $file"
-  target_entries=("title" "description" "date" "session" "tags" "thumbnail")
+  target_entries=("title" "description" "date" "session" "tags" "thumbnail", "theme")
   entries=()
+
+  theme=""
 
   for tag in "${target_entries[@]}"; do
     line=$(grep -i -m 1 "^${tag}:" $file)
     value=$(echo $line | cut -d ':' -f 2- | sed 's/^[[:space:]]*//')
+
+    if [ "$tag" = "theme" ]; then
+      theme=$value
+    fi
 
     if [ "$tag" = "tags" ]; then
       value=$(echo $value | sed 's/,/","/g' | tr -d '[:space:]')
@@ -30,6 +36,7 @@ find slides -name '*.md' -print | grep -v "templates/" | while read -r file; do
     fi
 
     entries+=("\"$tag\":$value")
+
   done
  
   entries_str=$(IFS=,; echo "${entries[*]}")
@@ -44,7 +51,7 @@ find slides -name '*.md' -print | grep -v "templates/" | while read -r file; do
   file_hash=$(cat $file | sha256sum)
   file_hash=$(echo $file_hash | cut -d ' ' -f 1)
 
-  echo "$path/$(basename $file) $file_hash" >> "$output_file.txt"
+  echo "$path/$(basename $file) $file_hash $theme" >> "$output_file.txt"
 done
 
 echo "]" >> "$output_file.json"

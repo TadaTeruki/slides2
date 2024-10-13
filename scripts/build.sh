@@ -30,6 +30,7 @@ while IFS= read -r line; do
     read -ra parts <<< "$line"
     path="${parts[0]}"
     hash="${parts[1]}"
+    theme="${parts[2]}"
     build=false
     if [ "$build_all" = "true" ]; then
         build=true
@@ -53,7 +54,12 @@ while IFS= read -r line; do
     if [ "$build" = "true" ]; then
         echo "Building slides..."
         {
-            pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir    
+            if [ -z "$theme" ]; then
+                pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir
+            else
+                echo "Building slides with theme public/themes/$theme.css"
+                pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir --theme public/themes/$theme.css
+            fi
         } || {
             err=1
         }

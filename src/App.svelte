@@ -3,7 +3,6 @@
   import Panel from './components/Panel.svelte';
   import Frame from './components/Frame.svelte';
   import { SlideRoute } from './lib/slide';
-
   
   let slideRoutes: SlideRoute[] = [];
   onMount(async () => {
@@ -15,6 +14,7 @@
     routes.sort((a, b) => b.date.getTime() - a.date.getTime());
     slideRoutes = routes;
   });
+  
 </script>
 
 <header>

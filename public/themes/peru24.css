@@ -1,0 +1,68 @@
+/* @theme peru24 */
+
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
+
+section::after {
+  color: rgb(100, 100, 100);
+  content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
+}
+
+:root {
+  --color-back: rgb(255, 255, 255);
+  --color-trans: rgba(255, 255, 255, 0.0);
+  --color-side-a: rgb(205, 235, 240);
+  --color-side-b: rgb(205, 240, 230);
+}
+
+section {
+    background:
+    linear-gradient(-70deg,
+        var(--color-side-b) 7.5%, 
+        var(--color-trans) 7.5%,
+        var(--color-trans) 94%,
+        var(--color-side-a) 94%),
+        linear-gradient(30deg,
+        var(--color-side-a) 3%, 
+        var(--color-back) 3%,
+        var(--color-back) 97%,
+        var(--color-side-b) 97%);
+    background-size: cover;
+    background-position: center;
+    color: rgb(90, 90, 90);
+    font-family: 'Zen Maru Gothic', sans-serif;  
+    font-size: xx-large;
+    text-decoration: none;
+    padding: 1em 1em 1em 3em;
+    
+    place-content: safe center center;
+}
+
+header,
+footer {
+  margin: 0;
+  position: absolute;
+  left: 1em;
+  color: var(--header-footer-color);
+}
+
+header {
+    top: 21px;
+}
+
+footer {
+    bottom: 21px;
+}
+
+em {
+    font-weight: normal;
+    font-size: normal;
+    color: rgb(130, 130, 130);
+}
+
+section h1,h2,h3,h4 {
+    color: rgb(90, 130, 140);
+}
+
+section a:link {
+    color: rgb(150, 200, 220);
+}

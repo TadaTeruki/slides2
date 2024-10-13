@@ -1,5 +1,7 @@
 [
-{"src_path":"slides/test/good","src_file":"slide.html","title":"Welcome Good","description":"Simple Presentation","date":"2024-11-10","session":"良いLT会","tags":["test","good"],"thumbnail":""}
+{"src_path":"slides/test/good","src_file":"slide.html","title":"Welcome Good","description":"Simple Presentation","date":"2024-11-10","session":"良いLT会","tags":["test","good"],"thumbnail,":"","theme":"peru24"}
 ,
-{"src_path":"slides/test/bad","src_file":"slide.html","title":"Welcome Bad","description":"Simple Presentation","date":"2024-11-10","session":"悪いLT会","tags":["test","good"],"thumbnail":"img/test.webp"}
+{"src_path":"slides/test/bad","src_file":"slide.html","title":"Welcome Bad","description":"Simple Presentation","date":"2024-11-10","session":"悪いLT会","tags":["test","good"],"thumbnail,":"","theme":""}
+,
+{"src_path":"slides/2024/LT/slide-system","src_file":"slide.html","title":"スライドシステム再構築","description":"スライドの作成用システムを再構築しました","date":"2024-10-13","session":"未来祭LT 2024","tags":["LT","Marp","Svelte"],"thumbnail,":"","theme":"peru24"}
 ]
