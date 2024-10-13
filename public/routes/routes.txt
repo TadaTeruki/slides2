@@ -1,3 +1,3 @@
 slides/test/good/slide.md 3d4f08e2f8a487ef840ea2748cb7add4d5adfc148d14d34476bd0cd0f76ca7af peru24
 slides/test/bad/slide.md 12df6803b971724f531cdc51df35bb84b249ec47f12d7d56354920d8c7c0af12 
-slides/2024/LT/slide-system/slide.md 8c03a173930cb6157893720d15b20b4d9a03941786f908c348d8920d59f01393 peru24
+slides/2024/LT/slide-system/slide.md a106afcafab1cc7be32e5ec67daa74b7a806bc4a3fde2fba2d0f2137e528e2db peru24
