@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: peru24
-title: FUNAI輪読会 - ゼロから作るDeepLearning5章 2/2
+title: ゼロから作るDeepLearning5章 2/2
 description: ゼロから作るDeepLearning 5章 誤差逆伝播法 5.4-5.8の資料です。
 math: mathjax
 author: Teruki TADA
