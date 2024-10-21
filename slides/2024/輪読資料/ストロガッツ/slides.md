@@ -2,7 +2,7 @@
 marp: true
 theme: peru24doc
 title: ストロガッツ非線形ダイナミクスとカオス
-description: ストロガッツ非線形ダイナミクスとカオス 第4章 円周上の流れの資料です。
+description: ストロガッツ 第4章 円周上の流れの資料です。
 math: mathjax
 author: Teruki TADA
 session: FUNAI輪読会

@@ -1,7 +1,9 @@
 [
-{"src_path":"slides/test/good","src_file":"slide.html","title":"Welcome Good","description":"Simple Presentation","date":"2024-11-10","session":"良いLT会","tags":["test","good"],"thumbnail,":"","theme":"peru24"}
+{"src_path":"slides/2024/輪読資料/誤差逆1","src_file":"slide.html","title":"ゼロから作るDeepLearning5章1/2","description":"ゼロから作るDeepLearning 5章 誤差逆伝播法 5.1-5.3の資料です。","date":"2023-9-12","session":"FUNAI輪読会","tags":["FUNAI"],"thumbnail":"img/犬.webp","theme":"peru24doc"}
 ,
-{"src_path":"slides/test/bad","src_file":"slide.html","title":"Welcome Bad","description":"Simple Presentation","date":"2024-11-10","session":"悪いLT会","tags":["test","good"],"thumbnail,":"","theme":""}
+{"src_path":"slides/2024/輪読資料/誤差逆2","src_file":"slide.html","title":"ゼロから作るDeepLearning5章 2/2","description":"ゼロから作るDeepLearning 5章 誤差逆伝播法 5.4-5.8の資料です。","date":"2023-9-30","session":"FUNAI輪読会","tags":["FUNAI"],"thumbnail":"img/keshiki.webp","theme":"peru24doc"}
 ,
-{"src_path":"slides/2024/LT/slide-system","src_file":"slide.html","title":"スライドシステム再構築","description":"スライドの作成用システムを再構築しました","date":"2024-10-13","session":"未来祭LT 2024","tags":["LT","Marp","Svelte"],"thumbnail,":"","theme":"peru24"}
+{"src_path":"slides/2024/輪読資料/ストロガッツ","src_file":"slides.html","title":"ストロガッツ非線形ダイナミクスとカオス","description":"ストロガッツ 第4章 円周上の流れの資料です。","date":"2024-10-21","session":"FUNAI輪読会","tags":["FUNAI"],"thumbnail":"img/shikabe.webp","theme":"peru24doc"}
+,
+{"src_path":"slides/2024/LT/slide-system","src_file":"slide.html","title":"スライドシステム再構築","description":"スライドの作成用システムを再構築しました","date":"2024-10-13","session":"未来祭LT 2024","tags":["LT","Marp","Svelte"],"thumbnail":"img/thumbnail.webp","theme":"peru24"}
 ]
