@@ -35,6 +35,8 @@ $\theta$を円周上の点とし、上記の方程式を考える
 - **振動することができる系の最も基本的なモデル**を与える
   - 例: ホタルの周期的な発光
 
+![bg right:40% w:400 brightness:1.5](img/401.webp)
+
 ---
 
 ## 例題4.1.1
@@ -52,6 +54,7 @@ $\theta$は反時計回りに増加するとする
 
 よって、解答は右図となる
 
+![bg right:40% w:400 brightness:1.5](img/411.webp)
 
 ---
 
@@ -64,7 +67,6 @@ $\theta$は反時計回りに増加するとする
 
 ---
 
-
 ## 例題4.1.2
 
 **なぜ $\dot{\theta}=\theta$ を$-\infty<\theta<\infty$の範囲で円周上のベクトル場と見なすことができないのかを説明せよ**
@@ -74,7 +76,6 @@ $\theta$は反時計回りに増加するとする
 ## 例題4.1.2
 
 **なぜ $\dot{\theta}=\theta$ を$-\infty<\theta<\infty$の範囲で円周上のベクトル場と見なすことができないのかを説明せよ**
-
 
 (解) 速度が一意的に定義できないからである
 - 例: $f(0) \neq f(2\pi)$
@@ -122,6 +123,8 @@ $$ \theta = \omega t + \theta_0 $$
 
 位相差を $\phi = \theta_1-\theta_2$ とすると、$\dot{\phi} = \dot{\theta_1}-\dot{\theta_2} = \omega_1 - \omega_2$ 
 
+![bg right:40% w:400 brightness:1.4](img/421.webp)
+
 ---
 
 ## 例題4.2.1
@@ -129,7 +132,6 @@ $$ \theta = \omega t + \theta_0 $$
 よって、$\phi = 2\pi$になるまでの時間は
 
 $$ T_{lap} = \frac{2\pi}{\omega_1 - \omega_2} = (\frac{1}{T_1}-\frac{1}{T_2})^{-1} $$
-
 
 ---
 
