@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: peru24
+theme: peru24doc
 title: ゼロから作るDeepLearning5章1/2
 description: ゼロから作るDeepLearning 5章 誤差逆伝播法 5.1-5.3の資料です。
 math: mathjax
