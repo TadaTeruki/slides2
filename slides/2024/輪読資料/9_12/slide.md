@@ -8,7 +8,7 @@ author: Teruki TADA
 session: FUNAI輪読会
 date: 2023-9-12
 tags: FUNAI
-thumbnail: img/thumbnail.webp
+thumbnail: img/犬.webp
 ---
 
 **ゼロから作るDeepLearning**
