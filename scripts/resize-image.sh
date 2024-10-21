@@ -9,7 +9,10 @@ find slides -type d -name 'img-original' -print | grep -v "templates/" | while r
   find $img_original_dir -type 'f' -print | while read -r file; do
     echo "Processing $file"
     filename=$(basename $file)
-    out_file=$(echo $img_dir/$filename | cut -d '.' -f 1).webp
+    # filename without extension
+    filename_no_ext=$(echo $filename | sed 's/\.[^.]*$//')
+    out_file=$img_dir/$filename_no_ext.webp
+
     
     width=$(identify -format "%w" $file)
     resolution=1024
