@@ -99,3 +99,11 @@ code {
 pre code {
     background: none;
 }
+
+section.smartblockquote blockquote {
+    background-color: var(--color-background-code);
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    padding: 0.5em 1.5em;
+    margin: 0;
+    border-radius: 0.5em;
+}
