@@ -2,6 +2,7 @@ import defaultThumbnail from "../assets/default-thumbnail.webp";
 
 export class SlideRoute {
   slide: string;
+  slidePdf: string;
   title: string;
   description: string;
   date: Date;
@@ -11,6 +12,7 @@ export class SlideRoute {
 
   constructor(obj: any) {
     this.slide = obj.src_path + "/" + obj.src_file;
+    this.slidePdf = obj.src_path + "/" + obj.src_file.replace(".html", ".pdf");
     this.title = obj.title;
     this.description = obj.description;
     this.date = new Date(obj.date);

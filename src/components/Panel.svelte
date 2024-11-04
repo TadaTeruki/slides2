@@ -3,7 +3,6 @@
 
     export let slideRoute: SlideRoute;
 
-    $: console.log(slideRoute);
 </script>
 
 <a href={slideRoute.slide} class="panel">
@@ -23,10 +22,14 @@
             </span>
         </div>
         {slideRoute.description}
-
+        
     </div>
 
-    <img src={slideRoute.thumbnail} alt={slideRoute.title} />
+    <a href={slideRoute.slidePdf} class="download">
+        PDF&ensp;<img src="src/assets/download.svg" alt="PDF" class="pdfimage"/>
+    </a>
+
+    <img src={slideRoute.thumbnail} alt={slideRoute.title} class="thumbnail" />
 </a>
 
 <style>
@@ -70,6 +73,36 @@
         overflow: hidden;
     }
 
+    .download {
+        margin: auto 1.0em;
+        padding: 0.3em 0.6em;
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.3em;
+        background-color: #5d3f8d;
+        overflow: hidden;
+
+        color: white;
+        font-size: 0.9em;
+        font-weight: bold;
+
+        transition: background-color;
+        transition-duration: 0.2s;
+    }
+
+    .download:hover {
+        background-color: #3a1970;
+    }
+
+    img.pdfimage {
+        margin: auto;
+        width: 1.0em;
+        height: 1.0em;
+    }
+
     .title {
         font-size: 1.2em;
         font-weight: bold;
@@ -84,15 +117,15 @@
         color: white;
     }
 
-    .panel img {
-        width: 30%;
+    img.thumbnail {
+        width: 25%;
         overflow: hidden;
         object-fit: cover;
         margin: 0;
     }
 
-    @media (max-width: 40em) {
-        .panel img {
+    @media (max-width: 60em) {
+        img.thumbnail {
             display: none;
         }
     }
