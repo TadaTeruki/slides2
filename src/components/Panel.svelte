@@ -26,7 +26,7 @@
     </div>
 
     <a href={slideRoute.slidePdf} class="download">
-        PDF&ensp;<img src="assets/download.svg" alt="PDF" class="pdfimage"/>
+        PDF&ensp;<img src="download.svg" alt="PDF" class="pdfimage"/>
     </a>
 
     <img src={slideRoute.thumbnail} alt={slideRoute.title} class="thumbnail" />
