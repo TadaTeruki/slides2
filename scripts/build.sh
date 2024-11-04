@@ -56,9 +56,11 @@ while IFS= read -r line; do
         {
             if [ -z "$theme" ]; then
                 pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir
+                pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir --pdf --allow-local-files
             else
                 echo "Building slides with theme public/themes/$theme.css"
                 pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir --theme public/themes/$theme.css
+                pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir --theme public/themes/$theme.css --pdf --allow-local-files
             fi
         } || {
             err=1
