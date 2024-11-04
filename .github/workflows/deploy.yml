@@ -27,9 +27,9 @@ jobs:
           git rm ./public/.gitignore
           export LAST_COMMIT_MESSAGE=`git --no-pager log --format=format:'%B' -n 1`
           if [[ $LAST_COMMIT_MESSAGE == build-all* ]]; then
-            pnpm run build-slide-all
+            make build-slide-all
           else
-            pnpm run build-slide-auto
+            make build-slide-auto
           fi
           git add .
           git commit -m "build: $(date +'%Y/%m/%d %H:%M:%S')" 
