@@ -12,7 +12,7 @@ export class SlideRoute {
 
   constructor(obj: any) {
     this.slide = obj.src_path + "/" + obj.src_file;
-    this.slidePdf = obj.src_path + "/" + obj.src_file.replace(".html", ".pdf");
+    this.slidePdf = obj.src_path + "/" + obj.sanitized_title + ".pdf";
     this.title = obj.title;
     this.description = obj.description;
     this.date = new Date(obj.date);

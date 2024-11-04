@@ -31,6 +31,7 @@ while IFS= read -r line; do
     path="${parts[0]}"
     hash="${parts[1]}"
     theme="${parts[2]}"
+    title="${parts[3]}"
     build=false
     if [ "$build_all" = "true" ]; then
         build=true
@@ -44,6 +45,7 @@ while IFS= read -r line; do
 
     out_dir=public/$(dirname $path)/
     out_file=$(basename $path .md).html
+    out_file_pdf=$(basename $path .md).pdf
     mkdir -p $out_dir
     echo "Building $out_dir$out_file"
 
@@ -62,6 +64,7 @@ while IFS= read -r line; do
                 pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir --theme public/themes/$theme.css
                 pnpx @marp-team/marp-cli@latest -I $(dirname $path) --output $out_dir --theme public/themes/$theme.css --pdf --allow-local-files
             fi
+            mv $out_dir$out_file_pdf $out_dir$title.pdf
         } || {
             err=1
         }
@@ -69,11 +72,9 @@ while IFS= read -r line; do
     fi
 done < "$file"
 
-if [ $err = 0 ]; then
-    # update routes
-    echo "Updating routes..."
-    cp -r public/routes-tmp/* public/routes/
-fi
+# update routes
+echo "Updating routes..."
+cp -r public/routes-tmp/* public/routes/
 
 # remove temporary files
 echo "Removing temporary files..."

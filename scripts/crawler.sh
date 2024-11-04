@@ -18,11 +18,16 @@ find slides -name '*.md' -print | grep -v "templates/" | while read -r file; do
   target_entries=("title" "description" "date" "session" "tags" "thumbnail" "theme")
   entries=()
 
+  sanitized_title=""
   theme=""
 
   for tag in "${target_entries[@]}"; do
     line=$(grep -i -m 1 "^${tag}:" $file)
     value=$(echo $line | cut -d ':' -f 2- | sed 's/^[[:space:]]*//')
+
+    if [ "$tag" = "title" ]; then
+      sanitized_title=$(echo $value | sed 's/ /-/g' | sed 's/\//-/g')
+    fi
 
     if [ "$tag" = "theme" ]; then
       theme=$value
@@ -46,12 +51,12 @@ find slides -name '*.md' -print | grep -v "templates/" | while read -r file; do
   else
     echo "," >> "$output_file.json"
   fi
-  echo "{\"src_path\":\"$path\",\"src_file\":\"$(basename $file .md).html\",$entries_str}" >> "$output_file.json"
+  echo "{\"sanitized_title\":\"$sanitized_title\",\"src_path\":\"$path\",\"src_file\":\"$(basename $file .md).html\",$entries_str}" >> "$output_file.json"
 
   file_hash=$(cat $file | sha256sum)
   file_hash=$(echo $file_hash | cut -d ' ' -f 1)
 
-  echo "$path/$(basename $file) $file_hash $theme" >> "$output_file.txt"
+  echo "$path/$(basename $file) $file_hash $theme $sanitized_title" >> "$output_file.txt"
 done
 
 echo "]" >> "$output_file.json"
