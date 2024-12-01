@@ -12,7 +12,7 @@ section::after {
     --color-back: rgb(248, 247, 245);
     --color-trans: rgba(255, 255, 255, 0.0);
     --color-grid: rgb(240, 238, 235);
-    --color-background-code: rgba(235, 235, 235, 0.5);
+    --color-background-code: rgba(240, 238, 235, 0.5);
     --color-header: rgb(129, 91, 88);
     --color-pagination-back: rgb(129, 91, 88);
 }
