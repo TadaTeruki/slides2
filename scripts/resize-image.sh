@@ -14,16 +14,16 @@ find slides -type d -name 'img-original' -print | grep -v "templates/" | while r
     out_file=$img_dir/$filename_no_ext.webp
 
     
-    width=$(identify -format "%w" $file)
+    height=$(identify -format "%h" $file)
     resolution=1024
     # if the image is already resized, skip
-    if [ $width -le $resolution ]; then
+    if [ $height -le $resolution ]; then
       echo "Skip resizing"
       convert $file $out_file
       continue
     fi
 
     # resize image
-    convert $file -resize ${resolution}x $out_file
+    convert $file -resize x${resolution} $out_file
   done
 done
