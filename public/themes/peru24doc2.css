@@ -12,9 +12,12 @@ section::after {
     --color-back: rgb(248, 247, 245);
     --color-trans: rgba(255, 255, 255, 0.0);
     --color-grid: rgb(240, 238, 235);
-    --color-background-code: rgba(240, 238, 235, 0.5);
+    --color-shadow: rgb(224, 221, 216);
+    --color-background-code: rgba(236, 232, 228, 0.7);
     --color-header: rgb(129, 91, 88);
-    --color-pagination-back: rgb(129, 91, 88);
+    --color-side-border: rgb(129, 91, 88);
+    --color-pagination-back: rgb(146, 119, 119);
+    --color-pagination-shadow: rgb(105, 84, 82);
 }
 
 section {
@@ -42,7 +45,7 @@ footer {
   padding-right: 1em;
   font-size: 0.8em;
   color: var(--color-header);
-  border-bottom: 0.1em solid var(--color-pagination-back);
+  border-bottom: 0.1em solid var(--color-side-border);
 }
 
 header {
@@ -100,7 +103,7 @@ pre code {
 
 section.smartblockquote blockquote {
     background-color: var(--color-background-code);
-    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    box-shadow: 0.2em 0.2em 0.5em var(--color-shadow);
     padding: 0.5em 1.5em;
     margin: 0;
     border-radius: 0.5em;
@@ -109,18 +112,19 @@ section.smartblockquote blockquote {
 section::after {
     content: attr(data-marpit-pagination);
     position: absolute;
-    right: 1em;
-    bottom: 1.5em;
+    right: 1.2em;
+    bottom: 1.2em;
     padding: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2em;
-    height: 2em;
+    width: 1.8em;
+    height: 1.8em;
     border-radius: 50%;
 
     font-size: 0.8em;
-    background-color: var(--color-background-code);
-    
+    background-color: var(--color-pagination-back);
+    color: rgb(255, 255, 255);
+    box-shadow: 0.2em 0.2em 0.5em var(--color-pagination-shadow) inset;
 }
