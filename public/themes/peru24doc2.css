@@ -16,7 +16,7 @@ section::after {
     --color-background-code: rgba(236, 232, 228, 0.7);
     --color-header: rgb(129, 91, 88);
     --color-side-border: rgb(129, 91, 88);
-    --color-pagination-back: rgb(146, 119, 119);
+    --color-pagination-back: rgb(138, 109, 109);
     --color-pagination-shadow: rgb(105, 84, 82);
 }
 
