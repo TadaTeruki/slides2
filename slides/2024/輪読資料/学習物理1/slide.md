@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: peru24doc
+theme: peru24doc2
 title: 学習物理学入門 A1
 description: A1 1.4-1.7の資料です。
 math: mathjax
@@ -9,6 +9,8 @@ session: FUNAI輪読会
 date: 2024-11-30
 tags: FUNAI
 thumbnail: img/hiei.webp
+paginate: true
+header: 学習物理学入門 A1 1.4-1.7
 ---
 
 # 学習物理学入門 A1 1.4-1.7
