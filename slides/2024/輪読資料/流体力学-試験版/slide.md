@@ -270,7 +270,7 @@ $$ (\mathbf{u},\mathbf{n}) = (\mathbf{u}_w,\mathbf{n}) $$
 
 非圧縮性粘性流体での運動方程式
 
-$$\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \mathrm{grad})\mathbf{u} = -\frac{1}{\rho} \mathrm{grad}p + \nu \nabla^2 \mathbf{u} + \mathbf{K}$$
+$$\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \mathrm{grad})\mathbf{u} = -\frac{1}{\rho} \mathrm{grad}p + \nu \Delta \mathbf{u} + \mathbf{K}$$
 
 ただし$\nu=\frac{\mu}{\rho}$ ($\mu$は粘性係数)、 $\mathbf{K}$は外力
 
@@ -280,7 +280,7 @@ $$\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \mathrm{grad})\math
 
 ### レイノルズ数
 
-> ナヴィエ・ストークス方程式 $\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \mathrm{grad})\mathbf{u} = -\frac{1}{\rho} \mathrm{grad}p + \nu \nabla^2 \mathbf{u} + \mathbf{K}$
+> ナヴィエ・ストークス方程式 $\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \mathrm{grad})\mathbf{u} = -\frac{1}{\rho} \mathrm{grad}p + \nu \Delta \mathbf{u} + \mathbf{K}$
 
 ナヴィエ・ストークス方程式を無次元化すると、$\nu$の場所に
 流体の性質を表す無次元数である**レイノルズ数**が現れる
