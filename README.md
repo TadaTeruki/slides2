@@ -1,47 +1,58 @@
-# Svelte + TS + Vite
+# 「Z.J.S.S.」全自動スライドシステム 
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+[**slide.peruki.dev**](https://slide.peruki.dev)
 
-## Recommended IDE Setup
+by Teruki TADA
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## 概要
 
-## Need an official Svelte framework?
+以下の機能を全自動で提供します。
+- スライドのビルド
+    - HTML・PDFを生成し公開
+- [一覧ページ]((https://slide.peruki.dev))の公開
+    - 日付による整理
+    - サムネイルの生成
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+また、以下の機能を提供します。
 
-## Technical considerations
+- 画像の圧縮 `make resize-image`
+- スライドのリンクへのQRコードの生成 `make create-qr`
 
-**Why use this over SvelteKit?**
+## 使い方
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+スライドは[Marp](https://marp.app/)で作成します。
 
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+1. `slides/[年]/[カテゴリ]/[輪読資料名]/slide.md`にスライドの内容を記述します。
+ファイルの最初には、以下のように資料の情報を記述します。
+(スライド一覧は、この情報を自動で取得し作成しています)
+```markdown
+---
+marp: true
+theme: peru24doc2
+title: 学習物理学入門 A4
+description: A4.1-A4.2の資料です。
+math: mathjax
+author: Teruki TADA
+session: FUNAI輪読会
+date: 2025-1-13
+tags: FUNAI
+thumbnail: img/okayama.webp
+paginate: true
+header: 学習物理学入門 A4 古典力学と機械学習:NNと微分方程式
+---
 
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+(一枚目)
 
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+---
 
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+(二枚目)
 
-**Why include `.vscode/extensions.json`?**
+---
 
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from "svelte/store";
-export default writable(0);
+...
 ```
+
+2. `slides/[年]/[カテゴリ]/[輪読資料名]/img-original`に画像を保存します。
+`make resize-image`で画像を圧縮することができ、`.../img`に保存されます。
+
+3. git pushすると、GitHub Actionsにより、スライドが自動でビルド・公開されます。

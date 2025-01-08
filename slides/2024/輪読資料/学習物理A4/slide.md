@@ -6,7 +6,7 @@ description: A4.1-A4.2の資料です。
 math: mathjax
 author: Teruki TADA
 session: FUNAI輪読会
-date: 2024-12-2
+date: 2025-1-13
 tags: FUNAI
 thumbnail: img/okayama.webp
 paginate: true
@@ -20,7 +20,7 @@ header: 学習物理学入門 A4 古典力学と機械学習:NNと微分方程�
 公立はこだて未来大学 システム情報科学部
 複雑系知能学科 複雑系コース 3年
 
-*写真: 岡山県岡山市 駅前のビル街*
+*写真: 岡山県岡山市*
 
 ![bg right:40% brightness:105%](img/okayama.webp)
 
