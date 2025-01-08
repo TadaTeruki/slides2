@@ -56,3 +56,8 @@ header: 学習物理学入門 A4 古典力学と機械学習:NNと微分方程�
 `make resize-image`で画像を圧縮することができ、`.../img`に保存されます。
 
 3. git pushすると、GitHub Actionsにより、スライドが自動でビルド・公開されます。
+
+
+## 実家の犬の写真
+
+![doggy](./doc-images/dog-image.webp)
