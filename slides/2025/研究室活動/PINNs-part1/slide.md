@@ -1,8 +1,8 @@
 ---
 marp: true
 theme: peru24lab
-title: "Physics Informed Deep Learning (Part I)"
-description: "Physics Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear Partial Differential Equations"
+title: Physics Informed Deep Learning (Part I)
+description: Physics Informed Deep Learning (Part I) Data-driven Solutions of Nonlinear Partial Differential Equations
 math: mathjax
 author: Teruki TADA
 session: 研究室活動
