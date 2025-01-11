@@ -33,8 +33,7 @@ arXiv:1711.10561 (https://arxiv.org/abs/1711.10561)
 2017年発表の論文、Part IとPart IIの2部構成
 
 - Part I: data-driven solution (深層学習による非線形偏微分方程式の数値解法)
-- Part II: data-driven discovery (PINNsのパラメータ不定の方程式に対する適用)
-
+- Part II: data-driven discovery (パラメータ不定の方程式に対するPINNsの適用)
 
 ---
 
