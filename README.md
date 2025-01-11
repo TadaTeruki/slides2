@@ -1,4 +1,4 @@
-# 「Z.J.S.S.」全自動スライドシステム 
+# 全自動スライドシステム 
 
 [**slide.peruki.dev**](https://slide.peruki.dev)
 
@@ -6,7 +6,7 @@ by Teruki TADA
 
 ## 概要
 
-以下の機能を全自動で提供します。
+以下の機能を提供します。
 - スライドのビルド
     - HTML・PDFを生成し公開
 - [一覧ページ]((https://slide.peruki.dev))の公開
