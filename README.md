@@ -2,8 +2,6 @@
 
 [**slide.peruki.dev**](https://slide.peruki.dev)
 
-by Teruki TADA
-
 ## 概要
 
 以下の機能を提供します。
