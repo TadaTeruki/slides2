@@ -36,7 +36,7 @@ header: 学習物理学入門 A4 古典力学と機械学習:NNと微分方程�
   - パラメータの調整法
   - 局所最適解を防ぐアプローチ
     - 確率的勾配降下法 (SGD)、ミニバッチ勾配降下法
-    - Adamも言及された
+    - Adamなどの最適化手法
 - 活性化関数
   - シグモイド関数、ReLU関数、ソフトマックス関数
 - 誤差逆伝播法 ($\simeq$ 連鎖律)
@@ -194,8 +194,20 @@ Informed Deep Learning (Part I): Data-driven Solutions of Nonlinear
 Partial Differential Equations." arXiv preprint arXiv:1711.10561
 (2017).*
 
-*次回は、ResNet/ニューラルODEを導入し
-NNの仕組み自体を離散/連続の微分方程式の時間発展と解釈する*
+*次回は、NNの仕組み自体を離散/連続の微分方程式の時間発展と解釈*
+*→ ResNet/ニューラルODEを導入する*
 
 ![bg right:25%](img/dog2.webp)
 ![bg right:25% vertical](img/dog.webp)
+
+---
+
+# 参考
+
+**研究室の輪読会発表資料**
+
+https://slide.peruki.dev/slides/2025/%E7%A0%94%E7%A9%B6%E5%AE%A4%E6%B4%BB%E5%8B%95/PINNs-part1/slide
+
+**試験実装 (Burgers方程式, Continuous Time Model)**
+
+https://colab.research.google.com/drive/1yxV3gqjij-LULqGvU5NaYd3X3F9XkbuP?usp=sharing
