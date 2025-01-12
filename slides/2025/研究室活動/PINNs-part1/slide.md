@@ -487,4 +487,4 @@ PINNs: 物理法則を考慮した深層学習のアプローチ
 
 理解の参考(+深層学習フレームワークの練習)として用いた実装
 
-![bg right:20%](img/tokyo.webp)`
+![bg right:20%](img/tokyo.webp)
