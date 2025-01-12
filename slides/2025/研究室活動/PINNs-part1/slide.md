@@ -485,6 +485,8 @@ PINNs: 物理法則を考慮した深層学習のアプローチ
 
 # ご清聴ありがとうございました
 
-理解の参考(+深層学習フレームワークの練習)として用いた実装
+参考: PyTorchを用いた実装例 (Burgers, Continuous Time Models) 
+
+https://colab.research.google.com/drive/1yxV3gqjij-LULqGvU5NaYd3X3F9XkbuP?usp=sharing
 
 ![bg right:20%](img/tokyo.webp)

@@ -75,6 +75,7 @@ section h2 {
 section a:link {
     color: inherit;
     word-break: break-all;
+    text-decoration: underline;
 }
 
 pre {
