@@ -69,7 +69,12 @@ section h1 {
 }
 
 section h2 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
+}
+
+section h3 {
+    font-size: 2.0rem;
+    color: rgb(90, 90, 90);
 }
 
 section a:link {
