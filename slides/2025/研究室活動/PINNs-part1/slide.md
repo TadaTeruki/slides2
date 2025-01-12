@@ -23,7 +23,7 @@ paginate: true
 
 ---
 
-## 書誌情報
+# 書誌情報
 
 **Physics Informed Deep Learning (Part I): 
 Data-driven Solutions of Nonlinear Partial Differential Equations**
@@ -38,7 +38,20 @@ arXiv:1711.10561 (https://arxiv.org/abs/1711.10561)
 
 ---
 
-## 本研究の概要
+著者自身によるサンプル実装が存在
+*TensorFlow v1によるもので、メンテナンスは停止している*
+*ただし、単一で動く実装のコレクションのため、スクラッチ実装の参考として十分参考になる*
+https://github.com/maziarraissi/PINNs
+
+各機械学習フレームワーク向けの抽象化された実装も存在
+*実際に利用する場合はこちらが強く推奨されている*
+PyTorch: https://github.com/rezaakb/pinns-torch
+JAX: https://github.com/rezaakb/pinns-jax
+TensorFlow v2: https://github.com/rezaakb/pinns-tf2 
+
+---
+
+# 本研究の概要
 
 "physics-informed neural networks" (PINNs) の提案
 - 非線形偏微分方程式を解くデータ駆動のアプローチ
