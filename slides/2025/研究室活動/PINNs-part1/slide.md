@@ -78,7 +78,6 @@ TensorFlow v2: https://github.com/rezaakb/pinns-tf2
 
 - 古典的な数値計算手法
   - ルンゲ=クッタ法、有限要素法、スペクトル法など
-
 - データ駆動のアプローチ
   - ガウス過程回帰 (Gaussian Process Regression)
 

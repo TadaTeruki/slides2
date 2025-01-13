@@ -116,12 +116,11 @@ $$ \varepsilon = \int \text{d}t\text{d}\mathbf{x} [\frac{\partial f}{\partial t}
 
 ### 参考: 実際に学習を行うときは
 
-原著論文では、誤差を求める地点$(t_f^i, \mathbf{x}_f^i)$を$N_q$個設け
+誤差を求める地点$(t_f^i, \mathbf{x}_f^i)$を$N_q$個設け
 *最小化の対象となっている関数 $q=\frac{\partial f}{\partial t} - F(t, \mathbf{x}, f)$として*
 $$ MSE_q = \frac{1}{N_q}\sum_{i=1}^{N_q} |q(t_f^i, \mathbf{x}_f^i)|^2 $$
 のように表していた
-実装では$(t_f^i, \mathbf{x}_f^i)$は時空間領域上にランダムに点を生成して作成
-*完全なランダムではなく、空間上でまんべんなく分散するような生成アルゴリズムを用いていた*
+実装では$(t_f^i, \mathbf{x}_f^i)$は時空間領域上に点を生成して作成
 
 
 ---
@@ -204,10 +203,8 @@ Partial Differential Equations." arXiv preprint arXiv:1711.10561
 
 # 参考
 
-**研究室の輪読会発表資料**
-
+研究室の輪読会発表資料
 https://slide.peruki.dev/slides/2025/%E7%A0%94%E7%A9%B6%E5%AE%A4%E6%B4%BB%E5%8B%95/PINNs-part1/slide
 
-**試験実装 (Burgers方程式, Continuous Time Model)**
-
+試験実装 (Burgers方程式, Continuous Time Model)
 https://colab.research.google.com/drive/1yxV3gqjij-LULqGvU5NaYd3X3F9XkbuP?usp=sharing
